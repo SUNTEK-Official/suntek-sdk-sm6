@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.suntek.sample.sm6'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.suntek.sample.sm6'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '2.0.0'
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+}
